@@ -3,7 +3,7 @@ name: CI
 env:
   APPLICATION_NAME : "Python App"
   COMMIT_MSG       : "Commit SHA: ${{ github.sha }}"
-  BUILD_KEY : 'Build Global"
+  BUILD_KEY : "Build Global"
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      BUILD_KEY : 'Build1"
+      BUILD_KEY : "Build1"
 
     steps:
       - name: la before checkout
