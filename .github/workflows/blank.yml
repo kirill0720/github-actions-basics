@@ -44,7 +44,7 @@ jobs:
   
   deploy:
     runs-on: ubuntu-latest
-    need: [build, test]
+    needs: [build, test]
     steps:
       - name: Print ENV vars
         run: |
