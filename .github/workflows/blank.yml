@@ -3,6 +3,7 @@ name: CI
 env:
   APPLICATION_NAME : "Python App"
   COMMIT_MSG       : "Commit SHA: ${{ github.sha }}"
+  BUILD_KEY : 'Build Global"
 
 on:
   push:
@@ -10,10 +11,13 @@ on:
   pull_request:
     branches: [ "main" ]
 
-jobs:
+jobs2:
   build:
     runs-on: ubuntu-latest
     
+    env:
+      BUILD_KEY : 'Build1"
+
     steps:
       - name: la before checkout
         run: ls -la
@@ -29,6 +33,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      - name: Print Build ENV Var
+        run: echo ${{ env.BUILD }}
   
   teste:
     runs-on: ubuntu-latest
