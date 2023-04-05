@@ -35,9 +35,9 @@ jobs:
           echo test, and deploy your project.
       
       - name: Print Build ENV Var
-        run: echo ${{ env.BUILD }}
+        run: echo ${{ env.BUILD_KEY }}
   
-  teste:
+  test:
     runs-on: ubuntu-latest
     needs: [build]
     
