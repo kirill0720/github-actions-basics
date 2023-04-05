@@ -16,13 +16,13 @@ jobs:
     
     steps:
       - name: la before checkout
-        run: ll
+        run: ls -la
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
       - name: la after checkout
-        run: ll
+        run: ls -la
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
