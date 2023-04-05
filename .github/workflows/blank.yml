@@ -12,7 +12,7 @@ on:
 
 env:
   APPLICATION_NAME : "Python App"
-  COMMIT_MSG       : "Commit SHA: $({ github.sha })
+  COMMIT_MSG       : "Commit SHA: $({ github.sha })"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
