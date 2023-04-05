@@ -4,7 +4,7 @@ name: CI
 
 env:
   APPLICATION_NAME : "Python App"
-  COMMIT_MSG       : "Commit SHA: $({ github.sha })"
+  COMMIT_MSG       : "Commit SHA: ${{ github.sha }}"
 
 # Controls when the workflow will run
 on:
@@ -50,5 +50,5 @@ jobs:
     steps:
       - name: Print ENV vars
         run: |
-          echo env.APPLICATION_NAME,
-          echo env.COMMIT_MSG
+          echo "Message-1: ${{env.APPLICATION_NAME}}",
+          echo "Message-2: ${{env.COMMIT_MSG}}"
